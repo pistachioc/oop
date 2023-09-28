@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class StudentManagement {
+public class StudentManagement_week4 {
 
-    Student[] students = new Student[100];
+    Student_week4[] students = new Student_week4[100];
 
     /**
      * xem 2 hoc sinh co cung nhom khong.
      */
-    public static boolean sameGroup(Student s1, Student s2) {
+    public static boolean sameGroup(Student_week4 s1, Student_week4 s2) {
         return s1.getGroup().equals(s2.getGroup());
     }
 
     /**
      * them hoc sinh vao danh sach.
      */
-    public void addStudent(Student newStudent) {
+    public void addStudent(Student_week4 newStudent) {
         for (int i = 0; i < students.length; i++) {
             if (students[i] == null) {
                 students[i] = newStudent;
@@ -29,7 +29,7 @@ public class StudentManagement {
     public String studentsByGroup() {
         String result = "";
         ArrayList<String> groupList = new ArrayList<String>();
-        for (Student s : students) {
+        for (Student_week4 s : students) {
             if (s == null) {
                 break;
             }
@@ -39,7 +39,7 @@ public class StudentManagement {
         }
         for (String group : groupList) {
             result += group + "\n";
-            for (Student s : students) {
+            for (Student_week4 s : students) {
                 if (s == null) {
                     break;
                 }

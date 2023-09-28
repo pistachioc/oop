@@ -1,103 +1,85 @@
-public class Student {
-    private String name;
-
-    private String id;
-
-    private String group;
-
-    private String email;
+public class Student extends Person {
+    private String program;
+    private int year;
+    private double fee;
 
     /**
-     * lay ten.
+     * phuong thuc khoi tao.
+     * 
+     * @param name    ten
+     * @param address dia chi
+     * @param program program
+     * @param year    nam
+     * @param fee     fee
      */
-    public String getName() {
-        return name;
+    public Student(String name, String address, String program, int year, double fee) {
+        super(name, address);
+        this.program = program;
+        this.year = year;
+        this.fee = fee;
     }
 
     /**
-     * dat ten.
+     * tra ve program.
+     * 
+     * @return program
      */
-    public void setName(String n) {
-        name = n;
+    public String getProgram() {
+        return this.program;
     }
 
     /**
-     * lay ID.
+     * dat lai program.
+     * 
+     * @param program program
      */
-    public String getId() {
-        return id;
+    public void setProgram(String program) {
+        this.program = program;
     }
 
     /**
-     * dat ID.
+     * tra ve nam.
+     * 
+     * @return nam
      */
-    public void setId(String id) {
-        this.id = id;
+    public int getYear() {
+        return this.year;
     }
 
     /**
-     * lay nhom.
+     * dat lai nam.
+     * 
+     * @param year nam
      */
-    public String getGroup() {
-        return group;
+    public void setYear(int year) {
+        this.year = year;
     }
 
     /**
-     * dat nhom.
+     * tra ve fee.
+     * 
+     * @return fee
      */
-    public void setGroup(String group) {
-        this.group = group;
+    public double getFee() {
+        return this.fee;
     }
 
     /**
-     * lay email.
+     * dat lai fee.
+     * 
+     * @param fee fee
      */
-    public String getEmail() {
-        return email;
+    public void setFee(double fee) {
+        this.fee = fee;
     }
 
     /**
-     * dat email.
+     * toString.
      */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * lay thong tin.
-     */
-    public String getInfo() {
-        return name + " - " + id + " - " + group + " - " + email;
-    }
-
-    /**
-     * ban mau Student.
-     */
-    public Student() {
-        name = "Student";
-        id = "000";
-        group = "K62CB";
-        email = "uet@vnu.edu.vn";
-    }
-
-    /**
-     * ban mau Student 2.
-     */
-    public Student(String n, String sid, String em) {
-        name = n;
-        id = sid;
-        group = "K62CB";
-        email = em;
-    }
-
-    /**
-     * Student3.
-     */
-    public Student(Student s) {
-        name = s.name;
-        id = s.id;
-        group = s.group;
-        email = s.email;
+    @Override
+    public String toString() {
+        return "Student[" + super.toString() + ",program=" + this.program + ",year="
+                + this.year + ",fee=" + this.fee + "]";
     }
 
 }
