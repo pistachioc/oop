@@ -1,4 +1,1 @@
-# Me learning oop at uni
-
-### Local dev
-1. mmb
+# Me learning oop at UET
